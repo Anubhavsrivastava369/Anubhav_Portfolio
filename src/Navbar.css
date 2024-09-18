@@ -1,0 +1,198 @@
+.modelOverlay{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    transition: 0.5s;
+}
+.modelshow{
+  display: block;
+  transition: 0.5s;
+}
+
+.connectnone{
+    transition: 0.5s ease-in-out;
+    backdrop-filter: blur(100px);
+    top: -100%;
+}
+.connect{
+    position: fixed;
+    padding: 50px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    left: 25%;
+    top: -200%;
+    gap: 30px;
+    backdrop-filter: blur(10px);
+    transition: 0.5s ease-in-out;
+}
+.showconnect{
+  display: block;
+  top: 8%;
+  transition: 0.5s;
+}
+.connect-title{
+    background: linear-gradient(267deg ,#dA7C25 0.36%,#B923E1 102.06%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 30px;
+    font-weight: 800;
+}
+.connect-section{
+    background: rgba(255, 255, 255,0.1);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding: 50px 100px;
+    border: 1.5px solid white;
+    border-radius: 50px;
+    box-shadow: rgba(229, 229, 229, 0.25) 0px 50px 100px -20px, rgba(255, 255, 255, 0.3) 0px 30px 60px -30px;
+}
+.connect-list{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+.connect-list-item-heading{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+.connect-list-item-heading label{
+    font-size: 20px;
+    font-weight: 500;
+}
+.connect-list-item-heading svg{
+    height:3rem;
+    width: 3rem;
+    margin-right: 0.5rem;
+}
+.connect-list-item-link{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.connect-list-item-link svg{
+    height: 1.2rem;
+    width: 1.2rem;
+}
+a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: blue;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-height: 10rem;
+    z-index: -1;
+}
+img{
+    height: 20rem;
+    width: 20rem;
+}
+.nav-List{
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  font-size: 20px;
+  /* position: relative; */
+  transition: 0.4s;
+  padding: 0px;
+}
+.menuImg{
+    width: 4rem;
+    height: 2.2rem;
+    position: absolute;
+    z-index: -1;
+}
+.nav-contact button{
+    padding: 15px 30px;
+    border-radius: 20px;
+    background: linear-gradient(267deg ,#dA7C25 0.36%,#B923E1 102.06%);
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-contact:hover{
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+.anchor-Link{
+    text-decoration: none;
+    transition: 0.4s;
+    color: white;
+    cursor: pointer;
+}
+.anchor-Link:hover{
+    transition: 0.4s;
+    cursor: pointer;
+}
+.nav-menu-open{
+    width: 2rem;
+    height: 1.5rem;
+}
+.nav-menu-close{
+    width: 2rem;
+    height: 1.5rem;
+}
+.nav-menu-close,.nav-menu-open{
+    display: none;
+}
+@media (max-width:770px) {
+     .navbar{
+        margin: 20px 50px;
+     }
+     .nav-contact{
+        display: none;
+     }
+     .nav-menu-open{
+        display: block;
+        position: fixed;
+        right: 30px;
+     }
+     .nav-menu-close{
+        display: block;
+        position: relative;
+        top: 30px;
+        left: 290px;
+     }
+     .nav-List{
+        position: fixed;
+        flex-direction: column;
+        align-items: start;
+        top: 0;
+        gap: 30px;
+        right: 0;
+        background: #1f0016;
+        width: 350px;
+        height: 100%;
+        z-index: 2;
+        transition: all 0.5s;
+        right: -350px;
+     }
+     
+     .nav-List li{
+       font-size: 30px;
+       padding-left: 100px;
+       flex-direction: row;
+     }
+     .nav-List li:hover{
+        transform: scale(1.2);
+        transition: 0.3s;
+     }
+    
+}
